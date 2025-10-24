@@ -9,5 +9,3 @@ Allow: /
 
 Sitemap: https://guilhermeillescas.dev/sitemap.xml
 Host: https://guilhermeillescas.dev
-
-
