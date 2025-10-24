@@ -195,37 +195,27 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
     setTimeout(updateDisplacementMap, 0);
   }, [width, height]);
 
-  const [svgFiltersSupported, setSvgFiltersSupported] = useState<boolean | null>(null);
-  const [backdropSupported, setBackdropSupported] = useState<boolean | null>(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    if (typeof window === 'undefined' || typeof navigator === 'undefined') {
-      setSvgFiltersSupported(false);
-      setBackdropSupported(false);
-      return;
-    }
-
-    const isWebkit = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
-    const isFirefox = /Firefox/.test(navigator.userAgent);
-
-    if (isWebkit || isFirefox) {
-      setSvgFiltersSupported(false);
-    } else {
-      try {
-        const div = document.createElement('div');
-        div.style.backdropFilter = 'url(#test)';
-        const supported = div.style.backdropFilter !== '' && CSS.supports('backdrop-filter', 'blur(10px)');
-        setSvgFiltersSupported(supported);
-      } catch {
-        setSvgFiltersSupported(false);
-      }
-    }
-
-    setBackdropSupported(CSS?.supports('backdrop-filter', 'blur(10px)') ?? false);
+    setMounted(true);
   }, []);
 
-  const supportsSVGFilters = () => svgFiltersSupported ?? false;
-  const supportsBackdropFilter = () => backdropSupported ?? false;
+  function supportsSVGFilters() {
+    if (!mounted || typeof window === 'undefined' || typeof navigator === 'undefined') {
+      return true;
+    }
+    
+    const isWebkit = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+    const isFirefox = /Firefox/.test(navigator.userAgent);
+    
+    return !isWebkit && !isFirefox;
+  }
+
+  function supportsBackdropFilter() {
+    if (typeof window === 'undefined') return true;
+    return CSS?.supports?.('backdrop-filter', 'blur(10px)') ?? true;
+  }
 
   const getContainerStyles = (): React.CSSProperties => {
     const baseStyles: React.CSSProperties = {
@@ -237,8 +227,8 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
       '--glass-saturation': saturation
     } as React.CSSProperties;
 
-    const svgSupported = svgFiltersSupported === true;
-    const backdropFilterSupported = backdropSupported !== false;
+    const svgSupported = supportsSVGFilters();
+    const backdropFilterSupported = supportsBackdropFilter();
 
     if (svgSupported) {
       return {
