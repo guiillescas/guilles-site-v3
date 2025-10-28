@@ -358,7 +358,7 @@ export default function Home() {
               <div className="flex justify-center items-center order-2 md:order-1">
                 <ProfileCard 
                   avatarUrl="/assets/me.jpg"
-                  name="Guilherme Illescas"
+                  name=""
                   title=""
                   status="Available for new opportunities"
                   showUserInfo={false}
