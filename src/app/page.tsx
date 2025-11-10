@@ -115,7 +115,7 @@ export default function Home() {
                 href="https://digital-hippo.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="md:mt-12"
+                className="md:mt-8"
               >
                 <PixelCard variant="pink" className="bg-black w-[min(90vw,450px)] h-[360px] md:h-[380px]">
                   <div className="absolute inset-0 p-6 md:p-8 flex flex-col gap-4 md:gap-5 z-10">
@@ -143,7 +143,7 @@ export default function Home() {
                 href="https://coffee-delivery.guilhermeillescas.dev/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="md:-mt-6"
+                className="md:-mt-4"
               >
                 <PixelCard variant="yellow" className="bg-black w-[min(90vw,480px)] h-[400px] md:h-[440px]">
                   <div className="absolute inset-0 p-6 md:p-8 flex flex-col gap-4 md:gap-6 z-10">
@@ -161,6 +161,62 @@ export default function Home() {
                       </h3>
                       <p className="text-slate-300 text-sm md:text-base">
                         Do you love coffee? Me too. This website is insane, and it is from Rocketseat's course. I made it completly from scratch.
+                      </p>
+                    </div>
+                  </div>
+                </PixelCard>
+              </a>
+
+              <a
+                href="https://www.viralify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="md:mt-6"
+              >
+                <PixelCard variant="default" className="bg-black w-[min(90vw,450px)] h-[360px] md:h-[380px]">
+                  <div className="absolute inset-0 p-6 md:p-8 flex flex-col gap-4 md:gap-5 z-10">
+                    <div className="relative w-full h-36 md:h-44 rounded-xl overflow-hidden">
+                      <Image
+                        src="/assets/portfolios/viralify.png"
+                        alt="Viralify - Plataforma de análise de vídeos virais com IA"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-xl md:text-2xl font-bold text-white mb-2 md:mb-3">
+                        Viralify
+                      </h3>
+                      <p className="text-slate-300 text-sm md:text-base">
+                        Plataforma que ajuda empreendedores a transformar vídeos virais em vendas reais, com análises diárias e roteiros gerados por IA.
+                      </p>
+                    </div>
+                  </div>
+                </PixelCard>
+              </a>
+
+              <a
+                href="https://www.guilherme-e-giovana.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="md:-mt-6"
+              >
+                <PixelCard variant="blue" className="bg-black w-[min(90vw,500px)] h-[380px] md:h-[420px]">
+                  <div className="absolute inset-0 p-6 md:p-8 flex flex-col gap-4 md:gap-6 z-10">
+                    <div className="relative w-full h-40 md:h-52 rounded-xl overflow-hidden">
+                      <Image
+                        src="/assets/portfolios/wedding.png"
+                        alt="Site de casamento Guilherme & Giovana"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-xl md:text-2xl font-bold text-white mb-2 md:mb-3">
+                        Guilherme & Giovana
+                      </h3>
+                      <p className="text-slate-300 text-sm md:text-base">
+                        Site do meu casamento com várias coisas legais. Vale a pena dar uma explorada no site!
                       </p>
                     </div>
                   </div>
