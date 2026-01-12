@@ -95,7 +95,7 @@ export default function Home() {
                         src="/assets/portfolios/guidefy.png"
                         alt="Guidefy - Music Director tool for band management and song coordination"
                         fill
-                        className="object-cover"
+                        className="object-cover object-top"
                         priority
                       />
                     </div>
@@ -124,7 +124,7 @@ export default function Home() {
                         src="/assets/portfolios/digital-hippo.png"
                         alt="Digital Hippo - Digital marketplace for buying and selling products online"
                         fill
-                        className="object-cover"
+                        className="object-cover object-top"
                       />
                     </div>
                     <div>
@@ -152,7 +152,7 @@ export default function Home() {
                         src="/assets/portfolios/coffee-delivery.png"
                         alt="Coffee Delivery - Modern coffee shop website with online ordering system"
                         fill
-                        className="object-cover"
+                        className="object-cover object-top"
                       />
                     </div>
                     <div>
@@ -180,7 +180,7 @@ export default function Home() {
                         src="/assets/portfolios/viralify.png"
                         alt="Viralify - Plataforma de análise de vídeos virais com IA"
                         fill
-                        className="object-cover"
+                        className="object-cover object-top"
                       />
                     </div>
                     <div>
@@ -205,10 +205,10 @@ export default function Home() {
                   <div className="absolute inset-0 p-6 md:p-8 flex flex-col gap-4 md:gap-6 z-10">
                     <div className="relative w-full h-40 md:h-52 rounded-xl overflow-hidden">
                       <Image
-                        src="/assets/portfolios/wedding.png"
+                        src="/assets/portfolios/wedding-site.png"
                         alt="Site de casamento Guilherme & Giovana"
                         fill
-                        className="object-cover"
+                        className="object-cover object-top"
                       />
                     </div>
                     <div>
